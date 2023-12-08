@@ -33,8 +33,8 @@ const ToggleDarkMode = () => {
         onChange={handleDarkModeToggle}
       />
       <div className="dark-icon flex  items-center justify-center  absolute">
-        <Image className="sun" src={sun} alt="sun" />
-        <Image className="moon" src={moon} alt="moon" />
+        <Image className="sun" src={"/sun.svg"} alt="sun" />
+        <Image className="moon" src={"/moon.svg"} alt="moon" />
       </div>
     </div>
   );
