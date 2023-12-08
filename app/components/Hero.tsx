@@ -1,7 +1,7 @@
 import { personaldata } from "../constant/data";
 export default function Hero() {
   return (
-    <section className="w-full px-1">
+    <section className="w-full px-3">
       <div className="max-w-screen-lg mx-auto ">
         {personaldata.map((personal) => (
           <div key={personal.key}>
