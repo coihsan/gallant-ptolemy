@@ -28,7 +28,7 @@ export default function Navigation() {
               className="relative NavHover font-medium px-4 py-1 rounded-full"
               key={link.key}
             >
-              <Link className="text-green-600" href={link.href}>
+              <Link className="text-lime-500" href={link.href}>
                 {link.title}
               </Link>
             </div>
