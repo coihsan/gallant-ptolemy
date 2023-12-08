@@ -13,22 +13,24 @@ export const personaldata: {
   skills: string[];
   hobby: string[];
   location: string;
-  bio: string[];
+  experties: string[];
   contact: number;
-} [] = [{
-  key: 0,
-  fullName: "Bobby",
-  nickName: "Brown",
-  age: 35,
-  hobby: ["Travelling", "Reading", "Coding", "Design", "Writing"],
-  skills: ["Web Development", "UI/UX", "SEM", "SEO"],
-  location: "Kota Tangerang",
-  bio: [
-    "I'm Build Sales Growth with Digital Marketing",
-    "Increase Traffic in Google Search with SEO Performance App",
-    "Build a Web or Landing Page for Promotion and Launching Products",
-    "Am hobby travelling ✈️",
-    "Am from Tangerang Kota, Indonesia 🇮🇩"
-  ],
-  contact: 0812345678910,
-}];
+}[] = [
+  {
+    key: 0,
+    fullName: "Bobby Brown",
+    nickName: "Bobby",
+    age: 35,
+    hobby: ["Travelling", "Reading", "Coding", "Design", "Writing"],
+    skills: ["Web Development", "UI/UX", "SEM", "SEO"],
+    location: "Kota Tangerang",
+    experties: [
+      "I'm Build Sales Growth with Digital Marketing Activity.",
+      "Increase Traffic in Google Search with SEO Performance App.",
+      "Build a Web or Landing Page for Promotion and Launching Products.",
+      "Am hobby travelling ✈️.",
+      "Am from Tangerang Kota, Indonesia 🇮🇩.",
+    ],
+    contact: 812345678910,
+  },
+];
