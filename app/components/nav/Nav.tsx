@@ -9,9 +9,9 @@ export function Hamburger() {
 
   return (
     <div className="lg:hidden md:flex">
-      <button className="cursor-pointer flex items-center gap-2" onClick={()=> setIsOpen}>
+      <button className="cursor-pointer flex items-center gap-2" onClick={()=> setIsOpen(!isOpen)}>
         <span>Menu</span>
-        <Image src={"/menu.svg"} width={20} height={20} alt="menu" />
+        <Image src={"/menu.svg"} width={30} height={30} alt="menu" />
       </button>
     </div>
   );
@@ -25,15 +25,15 @@ export default function Navigation() {
         <div className="flex items-center gap-2">
           {NAVIGATION.map((link) => (
             <div
-              className="hover:bg-neutral-800 transition-colors duration-300 ease-linear font-medium px-4 py-1 rounded-full"
+              className="relative NavHover font-medium px-4 py-1 rounded-full"
               key={link.key}
             >
-              <Link className="" href={link.href}>
+              <Link className="text-green-600" href={link.href}>
                 {link.title}
               </Link>
             </div>
           ))}
-          <div className="hover:bg-neutral-800 transition-colors duration-300 ease-linear font-medium px-4 py-1 rounded-full flex items-center gap-2">
+          <div className="relative NavHover font-medium px-4 py-1 rounded-full flex items-center gap-2">
             <a href="#">Resume</a>
             <Image
               className=""

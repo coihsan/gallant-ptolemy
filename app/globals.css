@@ -24,10 +24,14 @@ body {
 .NavHover::before {
   position: absolute;
   content: "";
-  top: 0;
+  bottom: 0;
   width: 0;
   height: 2px;
   background-color: aliceblue;
+  transition: 0.35s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.NavHover:hover::before {
+  width: 100%;
 }
 @layer utilities {
   /* .NavHover {
