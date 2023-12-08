@@ -21,3 +21,16 @@ body {
   background-color: black;
   color: whitesmoke;
 }
+.NavHover::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 0;
+  height: 2px;
+  background-color: aliceblue;
+}
+@layer utilities {
+  /* .NavHover {
+    @apply before:absolute before:content-[""] before:top-2 before:block before:w-full before:h-[1px] before:bg-white hover:before:w-full;
+  } */
+}

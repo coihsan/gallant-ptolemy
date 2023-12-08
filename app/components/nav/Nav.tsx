@@ -3,9 +3,21 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { NAVIGATION } from "../../constant/data";
+
+export function Hamburger() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <div className="lg:hidden md:flex">
+      <button className="cursor-pointer flex items-center gap-2" onClick={()=> setIsOpen}>
+        <span>Menu</span>
+        <Image src={"/menu.svg"} width={20} height={20} alt="menu" />
+      </button>
+    </div>
+  );
+}
 export default function Navigation() {
   const [isMobile, setIsMobile] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className="absolute w-full  mx-auto px-5 py-3 ">
       <div className="flex items-center justify-between mx-auto max-w-screen-lg">
@@ -31,6 +43,7 @@ export default function Navigation() {
               alt="arrow link"
             />
           </div>
+          <Hamburger />
         </div>
       </div>
     </nav>

@@ -1,13 +1,9 @@
 export default function SideProjects() {
   return (
-    <section>
-      <section className="w-full px-5">
-        <div className="max-w-screen-lg mx-auto">
-          <div className="flex items-center gap-3">
-            <h1>Projects</h1>
-          </div>
-        </div>
-      </section>
+    <section className="w-full px-5 py-[5rem]">
+      <div className="max-w-screen-lg mx-auto">
+        <h1 className="text-3xl font-semibold">Projects</h1>
+      </div>
     </section>
   );
 }

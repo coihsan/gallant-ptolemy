@@ -9,8 +9,8 @@ export default function Home() {
     <main className="">
       <Navigation />
       <Hero />
-      <Instagram />
       <Projects />
+      <Instagram />
     </main>
   );
 }
