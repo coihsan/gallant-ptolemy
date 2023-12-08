@@ -5,15 +5,18 @@ export default function Instagram() {
     <section className="w-full px-3">
       <div className="max-w-screen-lg mx-auto">
         <div className="flex items-center gap-3">
-          <h1>Instagram</h1>
-          <Link href={"#"}>
+          <h1 className="text-3xl font-semibold">My Photos</h1>
+          <Link
+            className="flex items-center gap-1 bg-zinc-200 px-4 py-1 text-zinc-950 font-medium rounded-full w-max"
+            href={"#"}
+          >
             <Image
               src={"/instagram.svg"}
-              width={30}
-              height={30}
+              width={16}
+              height={16}
               alt="instagram"
             />
-            <span>Instagram</span>
+            <span>@bobybrown</span>
           </Link>
         </div>
       </div>
