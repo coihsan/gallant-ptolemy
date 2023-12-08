@@ -2,12 +2,12 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { NAVIGATION } from "../constant/data";
+import { NAVIGATION } from "../../constant/data";
 export default function Navigation() {
   const [isMobile, setIsMobile] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="absolute w-full  mx-auto px-3 py-3 ">
+    <nav className="absolute w-full  mx-auto px-5 py-3 ">
       <div className="flex items-center justify-between mx-auto max-w-screen-lg">
         <h1 className="font-extrabold text-5xl">BB.</h1>
         <div className="flex items-center gap-2">
