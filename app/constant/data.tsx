@@ -34,3 +34,69 @@ export const personaldata: {
     contact: 812345678910,
   },
 ];
+
+export const gallery = [
+  {
+    date: "09 Desember 2023",
+    tag: "tag",
+    src: "/image1.jpeg",
+    alt: "image",
+    title: "Lorem ipsum",
+  },
+  {
+    date: "09 Desember 2023",
+    tag: "tag",
+    src: "/image2.jpeg",
+    alt: "image",
+    title: "Lorem ipsum",
+  },
+  {
+    date: "09 Desember 2023",
+    tag: "tag",
+    src: "/image3.jpeg",
+    alt: "image",
+    title: "Lorem ipsum",
+  },
+  {
+    date: "09 Desember 2023",
+    tag: "tag",
+    src: "/image4.jpeg",
+    alt: "image",
+    title: "Lorem ipsum",
+  },
+  {
+    date: "09 Desember 2023",
+    tag: "tag",
+    src: "/image5.jpeg",
+    alt: "image",
+    title: "Lorem ipsum",
+  },
+  {
+    date: "09 Desember 2023",
+    tag: "tag",
+    image: "/image6.jpeg",
+    alt: "image",
+    title: "Lorem ipsum",
+  },
+  {
+    date: "09 Desember 2023",
+    tag: "tag",
+    src: "/image7.jpeg",
+    alt: "image",
+    title: "Lorem ipsum",
+  },
+  {
+    date: "09 Desember 2023",
+    tag: "tag",
+    src: "/image8.jpeg",
+    alt: "image",
+    title: "Lorem ipsum",
+  },
+  {
+    date: "09 Desember 2023",
+    tag: "tag",
+    src: "/image9.jpeg",
+    alt: "image",
+    title: "Lorem ipsum",
+  },
+];
