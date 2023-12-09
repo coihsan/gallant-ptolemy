@@ -1,7 +1,9 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import { gallery } from "../constant/data";
 import { icons } from "../constant/Icons";
+import { motion, whileInView } from "framer-motion";
 export default function Instagram() {
   return (
     <section className="w-full px-5">
@@ -18,7 +20,13 @@ export default function Instagram() {
         </div>
         <div className="grid grid-cols-3 gap-3 w-full pt-[2rem] max-[600px]:grid-cols-2">
           {gallery.map((postImage) => (
-            <div className="relative overflow-hidden group">
+            <motion.div
+              className="relative overflow-hidden group"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 2, delay: 1 }}
+              viewport={{ once: true }}
+            >
               <Image
                 className="grayscale hover:grayscale-0 transition-all ease-linear duration-300 hover:scale-[1.1]"
                 src={postImage.src}
@@ -30,7 +38,7 @@ export default function Instagram() {
                 <h3 className="text-[1.3rem]">{postImage.title}</h3>
                 <span className="text-[14px]">{postImage.date}</span>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
