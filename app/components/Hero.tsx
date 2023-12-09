@@ -6,7 +6,13 @@ export default function Hero() {
   return (
     <section className="w-full px-5 py-[9rem]">
       <div className="max-w-screen-lg mx-auto flex items-center justify-between gap-11 max-[600px]:flex-col max-[600px]:items-start">
-        <Image src={"/people.webp"} width={500} height={500} alt="people" />
+        <Image
+          className="grayscale hover:grayscale-0 transition-colors ease-linear duration-500"
+          src={"/people.webp"}
+          width={500}
+          height={500}
+          alt="people"
+        />
         {personaldata.map((personal) => (
           <div key={personal.key}>
             <h1 className="text-[4rem] leading-none font-semibold pb-6">

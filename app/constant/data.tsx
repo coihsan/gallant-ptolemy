@@ -26,9 +26,9 @@ export const personaldata: {
     location: "Kota Tangerang",
     experties: [
       "I'm Build Sales Growth with Digital Marketing Activity.",
-      "Increase Traffic in Google Search with SEO Performance App.",
-      "Build a Web or Landing Page for Promotion and Launching Products.",
-      "Am hobby travelling ✈️.",
+      "Increase Traffic in Google Search with SEO Performance.",
+      "Build a Web or Landing Page for Promotion or Products Launching.",
+      "Am hobby Travelling ✈️ and Photography 📸.",
       "Am from Tangerang Kota, Indonesia 🇮🇩.",
     ],
     contact: 812345678910,
