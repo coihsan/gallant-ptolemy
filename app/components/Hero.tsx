@@ -7,12 +7,12 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="w-full px-5 py-[9rem]">
-      <div className="max-w-screen-lg mx-auto flex items-center justify-between gap-11 max-[600px]:flex-col max-[600px]:items-start">
+    <section className="w-full px-5 max-[600px]:py-[9rem] ">
+      <div className="max-w-screen-lg mx-auto flex items-center justify-between gap-11 max-[600px]:flex-col max-[600px]:items-start h-[100vh] max-[600px]:h-full">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+          transition={{ delay: 3, duration: 1 }}
         >
           <Image
             className="grayscale hover:grayscale-0 transition-all ease-linear duration-500"
@@ -39,16 +39,21 @@ export default function Hero() {
                   key={index}
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1, duration: 3 }}
+                  transition={{ delay: 1, duration: 2 }}
                 >
                   {experties}
                 </motion.li>
               ))}
             </ul>
-            <div className="flex items-center gap-3 pt-[2rem]">
+            <motion.div
+              className="flex items-center gap-3 pt-[2rem]"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 2, duration: 1 }}
+            >
               <ContactmeButton />
               <AboutmeButton />
-            </div>
+            </motion.div>
           </div>
         ))}
       </div>
