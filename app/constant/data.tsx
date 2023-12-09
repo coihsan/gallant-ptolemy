@@ -37,6 +37,7 @@ export const personaldata: {
 
 export const gallery = [
   {
+    key: 0,
     date: "09 Desember 2023",
     tag: "tag",
     src: "/image1.jpeg",
@@ -44,6 +45,7 @@ export const gallery = [
     title: "Lorem ipsum",
   },
   {
+    key: 1,
     date: "09 Desember 2023",
     tag: "tag",
     src: "/image2.jpeg",
@@ -51,6 +53,7 @@ export const gallery = [
     title: "Lorem ipsum",
   },
   {
+    key: 2,
     date: "09 Desember 2023",
     tag: "tag",
     src: "/image3.jpeg",
@@ -58,6 +61,7 @@ export const gallery = [
     title: "Lorem ipsum",
   },
   {
+    key: 3,
     date: "09 Desember 2023",
     tag: "tag",
     src: "/image4.jpeg",
@@ -65,6 +69,7 @@ export const gallery = [
     title: "Lorem ipsum",
   },
   {
+    key: 4,
     date: "09 Desember 2023",
     tag: "tag",
     src: "/image5.jpeg",
@@ -72,6 +77,7 @@ export const gallery = [
     title: "Lorem ipsum",
   },
   {
+    key: 5,
     date: "09 Desember 2023",
     tag: "tag",
     image: "/image6.jpeg",
@@ -79,6 +85,7 @@ export const gallery = [
     title: "Lorem ipsum",
   },
   {
+    key: 6,
     date: "09 Desember 2023",
     tag: "tag",
     src: "/image7.jpeg",
@@ -86,6 +93,7 @@ export const gallery = [
     title: "Lorem ipsum",
   },
   {
+    key: 7,
     date: "09 Desember 2023",
     tag: "tag",
     src: "/image8.jpeg",
@@ -93,6 +101,7 @@ export const gallery = [
     title: "Lorem ipsum",
   },
   {
+    key: 8,
     date: "09 Desember 2023",
     tag: "tag",
     src: "/image9.jpeg",

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { gallery } from "../constant/data";
+import { icons } from "../constant/Icons";
 export default function Instagram() {
   return (
     <section className="w-full px-5">
@@ -8,19 +9,14 @@ export default function Instagram() {
         <div className="flex items-center gap-3">
           <h1 className="text-3xl font-semibold">My Photos</h1>
           <Link
-            className="flex items-center gap-1 bg-zinc-200 px-4 py-1 text-zinc-950 font-medium rounded-full w-max"
+            className="flex items-center gap-1 bg-zinc-800 px-4 py-1 text-zinc-50 font-medium rounded-md w-max"
             href={"#"}
           >
-            <Image
-              src={"/instagram.svg"}
-              width={16}
-              height={16}
-              alt="instagram"
-            />
-            <span>@bobybrown</span>
+            <span>{icons.instagram}</span>
+            <span>bobybrown</span>
           </Link>
         </div>
-        <div className="grid grid-cols-3 gap-3 w-full pt-[2rem]">
+        <div className="grid grid-cols-3 gap-3 w-full pt-[2rem] max-[600px]:grid-cols-2">
           {gallery.map((postImage) => (
             <div className="relative overflow-hidden group">
               <Image
