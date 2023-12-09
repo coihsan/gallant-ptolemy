@@ -25,15 +25,15 @@ export default function Navigation() {
         <div className="flex items-center gap-2">
           {NAVIGATION.map((link) => (
             <div
-              className="relative NavHover w-max font-medium hover:text-lime-500"
+              className="relative NavHover group w-max font-medium group-hover:text-lime-500"
               key={link.key}
             >
-              <Link className="hover:text-white" href={link.href}>
+              <Link className="group-hover:text-white" href={link.href}>
                 {link.title}
               </Link>
             </div>
           ))}
-          <div className="relative NavHover w-max font-medium px-4 py-1 rounded-full flex items-center gap-2">
+          <div className="relative NavHover bg-green-500 w-max font-medium rounded-full flex items-center gap-2">
             <a href="#">Resume</a>
             <Image
               className=""
