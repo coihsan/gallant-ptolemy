@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="w-full px-5 py-[9rem]">
       <div className="max-w-screen-lg mx-auto flex items-center justify-between gap-11 max-[600px]:flex-col max-[600px]:items-start">
         <Image
-          className="grayscale hover:grayscale-0 transition-colors ease-linear duration-500"
+          className="grayscale hover:grayscale-0 transition-all ease-linear duration-500"
           src={"/people.webp"}
           width={500}
           height={500}
@@ -16,7 +16,7 @@ export default function Hero() {
         {personaldata.map((personal) => (
           <div key={personal.key}>
             <h1 className="text-[4rem] leading-none font-semibold pb-6">
-              I'm {personal.fullName}
+              I'm {personal.fullName}.
             </h1>
             <ul className="list-disc pl-3 ml-3 grid gap-3">
               {personal.experties.map((experties, index) => (

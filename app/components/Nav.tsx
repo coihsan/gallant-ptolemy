@@ -23,7 +23,7 @@ export default function Navigation() {
   const [isMobile, setIsMobile] = useState(false);
   return (
     <nav className="absolute w-full  mx-auto px-5 py-3 ">
-      <div className="flex items-center justify-between mx-auto max-w-screen-lg py-4 border-b-2 border-zinc-300">
+      <div className="flex items-center justify-between mx-auto max-w-screen-lg py-4 border-b-[1px] border-zinc-300">
         <h1 className="font-extrabold text-3xl">Bob.</h1>
         <div className="flex items-center gap-7">
           {NAVIGATION.map((link) => (
