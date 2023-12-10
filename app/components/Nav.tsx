@@ -25,8 +25,8 @@ export default function Navigation() {
   return (
     <nav className="absolute w-full  mx-auto px-5 py-3 ">
       <div className="flex items-center justify-between mx-auto max-w-screen-lg py-4 border-b-[1px] border-zinc-300">
-        <div className="flex items-center gap-4 mx-auto">
-          <h1 className="font-extrabold text-3xl">Bob.</h1>
+        <h1 className="font-extrabold text-3xl">Bob.</h1>
+        <div className="flex items-center gap-4 mx-auto ">
           <div className="flex items-center gap-7">
             {NAVIGATION.map((link) => (
               <div
@@ -51,10 +51,12 @@ export default function Navigation() {
             <Hamburger />
           </div>
         </div>
-        <div>
+        <div className="flex items-center gap-3">
           {socialLink.map((iconLink) => (
-            <div key={iconLink.id}>
-              <Link className="fill-white" href={iconLink.url}></Link>
+            <div className="" key={iconLink.id}>
+              <Link className="fill-white text-[30px]" href={iconLink.url}>
+                {iconLink.icons}
+              </Link>
             </div>
           ))}
         </div>
