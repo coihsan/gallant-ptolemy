@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { NAVIGATION } from "../constant/data";
-import { iconSocial } from "../constant/Icons";
+import { socialLink } from "../constant/Icons";
 
 export function Hamburger() {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,8 +52,10 @@ export default function Navigation() {
           </div>
         </div>
         <div>
-          {iconSocial.map((iconsSocial) => (
-            <Link className="">{iconsSocial}</Link>
+          {socialLink.map((iconLink) => (
+            <div key={iconLink.id}>
+              <Link className="fill-white" href={iconLink.url}></Link>
+            </div>
           ))}
         </div>
       </div>
