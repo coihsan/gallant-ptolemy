@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { NAVIGATION } from "../constant/data";
+import { iconSocial } from "../constant/Icons";
 
 export function Hamburger() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,29 +25,36 @@ export default function Navigation() {
   return (
     <nav className="absolute w-full  mx-auto px-5 py-3 ">
       <div className="flex items-center justify-between mx-auto max-w-screen-lg py-4 border-b-[1px] border-zinc-300">
-        <h1 className="font-extrabold text-3xl">Bob.</h1>
-        <div className="flex items-center gap-7">
-          {NAVIGATION.map((link) => (
-            <div
-              className="relative NavHover group w-max font-medium group-hover:text-lime-500"
-              key={link.key}
-            >
-              <Link className="group-hover:text-white" href={link.href}>
-                {link.title}
-              </Link>
+        <div className="flex items-center gap-4 mx-auto">
+          <h1 className="font-extrabold text-3xl">Bob.</h1>
+          <div className="flex items-center gap-7">
+            {NAVIGATION.map((link) => (
+              <div
+                className="relative NavHover group w-max font-medium group-hover:text-lime-500"
+                key={link.key}
+              >
+                <Link className="group-hover:text-white" href={link.href}>
+                  {link.title}
+                </Link>
+              </div>
+            ))}
+            <div className="relative NavHover w-max font-medium rounded-full flex items-center gap-2">
+              <a href="#">Resume</a>
+              <Image
+                className=""
+                src={"/arrow-up-right-from-square.svg"}
+                width={16}
+                height={16}
+                alt="arrow link"
+              />
             </div>
-          ))}
-          <div className="relative NavHover w-max font-medium rounded-full flex items-center gap-2">
-            <a href="#">Resume</a>
-            <Image
-              className=""
-              src={"/arrow-up-right-from-square.svg"}
-              width={16}
-              height={16}
-              alt="arrow link"
-            />
+            <Hamburger />
           </div>
-          <Hamburger />
+        </div>
+        <div>
+          {iconSocial.map((iconsSocial) => (
+            <Link className="">{iconsSocial}</Link>
+          ))}
         </div>
       </div>
     </nav>

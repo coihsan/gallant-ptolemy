@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { gallery } from "../constant/data";
-import { icons } from "../constant/Icons";
+import { iconSocial } from "../constant/Icons";
 import { motion, whileInView } from "framer-motion";
 export default function Instagram() {
   return (
@@ -14,7 +14,7 @@ export default function Instagram() {
             className="flex items-center gap-2 bg-zinc-800 px-4 py-1 text-zinc-50 font-medium rounded-md w-max"
             href={"#"}
           >
-            <span className="fill-white">{icons.instagram}</span>
+            <span className="fill-white">{iconSocial.instagram}</span>
             <span>bobybrown</span>
           </Link>
         </div>
