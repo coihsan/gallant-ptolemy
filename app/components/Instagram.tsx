@@ -11,16 +11,17 @@ export default function Instagram() {
         <div className="flex items-center gap-3">
           <h1 className="text-3xl font-semibold">My Photos</h1>
           <Link
-            className="flex items-center gap-1 bg-zinc-800 px-4 py-1 text-zinc-50 font-medium rounded-md w-max"
+            className="flex items-center gap-2 bg-zinc-800 px-4 py-1 text-zinc-50 font-medium rounded-md w-max"
             href={"#"}
           >
-            <span>{icons.instagram}</span>
+            <span className="fill-white">{icons.instagram}</span>
             <span>bobybrown</span>
           </Link>
         </div>
         <div className="grid grid-cols-3 gap-3 w-full pt-[2rem] max-[600px]:grid-cols-2">
           {gallery.map((postImage) => (
             <motion.div
+              key={postImage.key}
               className="relative overflow-hidden group"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}

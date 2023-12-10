@@ -80,7 +80,7 @@ export const gallery = [
     key: 5,
     date: "09 Desember 2023",
     tag: "tag",
-    image: "/image6.jpeg",
+    src: "/image6.jpeg",
     alt: "image",
     title: "Lorem ipsum",
   },
