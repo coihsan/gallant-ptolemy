@@ -110,3 +110,48 @@ export const gallery = [
     title: "Lorem ipsum",
   },
 ];
+
+export const projectslist = [
+  {
+    key: 0,
+    projectName: "E-Commerce Website",
+    projectType: "Web Development",
+    url: "#",
+    companyName: "Acme Corporation",
+  },
+  {
+    key: 1,
+    projectName: "Corporate Website",
+    projectType: "Web Development",
+    url: "#",
+    companyName: "Khan INC",
+  },
+  {
+    key: 2,
+    projectName: "SaaS Platform",
+    projectType: "Web Development",
+    url: "#",
+    companyName: "XYZ Software",
+  },
+  {
+    key: 3,
+    projectName: "SEO/SEM Campaign",
+    projectType: "SEO/SEM",
+    url: "#",
+    companyName: "You Too Company",
+  },
+  {
+    key: 4,
+    projectName: "Intranet",
+    projectType: "Web Development",
+    url: "#",
+    companyName: "Intranet Company",
+  },
+  {
+    key: 5,
+    projectName: "MyTravelBlog",
+    projectType: "Personal Website",
+    url: "#",
+    companyName: "Personal Client",
+  },
+];
