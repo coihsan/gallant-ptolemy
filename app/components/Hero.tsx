@@ -12,7 +12,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 3, duration: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
         >
           <Image
             className="grayscale hover:grayscale-0 transition-all ease-linear duration-500"

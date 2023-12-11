@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Noto_Serif } from "next/font/google";
-
+import Navigation from "./components/Nav";
+import Footer from "./components/Footer";
 const NotoSerif = Noto_Serif({ subsets: ["latin"] });
 
 export const metadata = {
@@ -15,7 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={NotoSerif.className}>{children}</body>
+      <body className={NotoSerif.className}>
+        <Navigation />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
