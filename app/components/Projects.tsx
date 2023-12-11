@@ -26,13 +26,14 @@ export default function SideProjects() {
         </div>
         <div className="grid grid-cols-3 gap-3 max-[600px]:grid-cols-2 pt-[2rem]">
           {projectslist.map((list) => (
-            <motion.Link
+            <motion.a
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1 }}
               viewport={{ once: true }}
               key={list.key}
               href={list.url}
+              target={"_blank"}
               className="relative group rounded-md bg-zinc-900 hover:bg-zinc-800 transition-colors duration-500 ease-linear px-5 py-9"
             >
               <div>
@@ -45,7 +46,7 @@ export default function SideProjects() {
                   {icons.linkArrow}
                 </span>
               </div>
-            </motion.Link>
+            </motion.a>
           ))}
         </div>
       </div>

@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={NotoSerif.className}>
         <Navigation />
-        {children}
+        <main className="max-w-screen-lg mx-auto">{children}</main>
         <Footer />
       </body>
     </html>

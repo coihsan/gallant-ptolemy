@@ -1,7 +1,7 @@
 "use client";
 import AboutmeButton from "../UI/aboutme";
 import ContactmeButton from "../UI/contact";
-import { personaldata } from "../constant/data";
+import { personaldata } from "../constant/personal";
 import Image from "next/image";
 import { motion } from "framer-motion";
 

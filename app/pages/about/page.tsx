@@ -1,7 +1,7 @@
 export default function Aboutme() {
   return (
-    <section className="mx-auto max-w-screen-lg">
-      <h1>Hey there!</h1>
+    <section className="pt-[9rem]">
+      <h1 className="text-3xl">Hey there!</h1>
       <p>
         I{"'"}m a digital marketing whiz who lives and breathes sales growth.
       </p>
@@ -17,6 +17,7 @@ export default function Aboutme() {
         anything and everything, especially if it involves marketing, travel, or
         both! ☕
       </p>
+      <br />
       <h3>So, what are you waiting for? Let{"'"}s connect!</h3>
     </section>
   );
