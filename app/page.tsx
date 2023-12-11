@@ -16,7 +16,6 @@ export default function Home() {
       <Projects />
       <Instagram />
       <Blogs />
-      <Footer />
     </main>
   );
 }

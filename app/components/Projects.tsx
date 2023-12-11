@@ -29,7 +29,7 @@ export default function SideProjects() {
             <motion.Link
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 2, delay: 1 }}
+              transition={{ duration: 1, delay: 1 }}
               viewport={{ once: true }}
               key={list.key}
               href={list.url}

@@ -30,7 +30,7 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 3 }}
             >
-              I'm {personal.fullName}.
+              I{"'"}m {personal.fullName}.
             </motion.h1>
             <ul className="list-disc pl-3 ml-3 grid gap-3">
               {personal.experties.map((experties, index) => (
