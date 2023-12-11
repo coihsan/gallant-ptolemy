@@ -1,24 +1,65 @@
+"use client";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { personaldata } from "../../constant/personal";
 export default function Aboutme() {
   return (
-    <section className="pt-[9rem]">
-      <h1 className="text-3xl">Hey there!</h1>
-      <p>
-        I{"'"}m a digital marketing whiz who lives and breathes sales growth.
-      </p>
-      <p>
-        My mission? To get your website noticed by the Google gods and send a
-        flood of potential customers your way. I do this by weaving SEO magic
-        and crafting landing pages that convert visitors into paying fans like
-        nobody{"'"}s business. But wait, there{"'"}s more! I{"'"}m also a travel
-        bug with a serious case of wanderlust. {"✈️"} My camera is always by my
-        side, capturing the beauty of the world around me. When I{"'"}m not busy
-        globetrotting or crushing digital marketing goals, you{"'"}ll find me in
-        Tangerang City, Indonesia. {"🇮🇩"} I{"'"}m always down to chat about
-        anything and everything, especially if it involves marketing, travel, or
-        both! ☕
-      </p>
-      <br />
-      <h3>So, what are you waiting for? Let{"'"}s connect!</h3>
-    </section>
+    <>
+      {personaldata.map((personal) => (
+        <section className="pt-[9rem]">
+          <div className="grid grid-cols-2 items-start">
+            <motion.div
+              className="pr-5 w-full"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 1 }}
+            >
+              <Image
+                className="grayscale hover:grayscale-0 transition-all ease-linear duration-500"
+                src={"/people.webp"}
+                width={500}
+                height={500}
+                alt="people"
+              />
+            </motion.div>
+            <div>
+              <h1 className="text-3xl">Hey there!</h1>
+              <br />
+              <p>
+                I{"'"}m a digital marketing whiz who lives and breathes sales
+                growth.
+              </p>
+              <br />
+              <p>
+                My mission? To get your website noticed by the Google gods and
+                send a flood of potential customers your way.
+              </p>
+              <br />
+              <p>
+                I do this by weaving SEO magic and crafting landing pages that
+                convert visitors into paying fans like nobody{"'"}s business.
+                But wait, there{"'"}s more! I{"'"}m also a travel bug with a
+                serious case of wanderlust. {"✈️"}{" "}
+              </p>
+              <br />
+              <p>
+                My camera is always by my side, capturing the beauty of the
+                world around me. When I{"'"}m not busy globetrotting or crushing
+                digital marketing goals, you
+                {"'"}ll find me in Tangerang City, Indonesia. {"🇮🇩"} I{"'"}m
+                always down to chat about anything and everything, especially if
+                it involves marketing, travel, or both! ☕
+              </p>
+            </div>
+            <ul className="grid grid-cols-4 items-center gap-3">
+              {personal.passionate.map((passionate) => (
+                <li>{passionate}</li>
+              ))}
+            </ul>
+          </div>
+          <h3>So, what are you waiting for? Let{"'"}s connect!</h3>
+        </section>
+      ))}
+    </>
   );
 }
