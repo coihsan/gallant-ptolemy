@@ -25,7 +25,7 @@ export default function Aboutme() {
             <div>
               <h1 className="text-3xl">Hey there!</h1>
               <br />
-              <p>
+              <p className="">
                 I{"'"}m a digital marketing whiz who lives and breathes sales
                 growth.
               </p>
@@ -51,12 +51,12 @@ export default function Aboutme() {
                 it involves marketing, travel, or both! ☕
               </p>
             </div>
-            <ul className="grid grid-cols-4 items-center gap-3">
-              {personal.passionate.map((passionate) => (
-                <li>{passionate}</li>
-              ))}
-            </ul>
           </div>
+          <ul className="flex items-center gap-3 w-full">
+            {personal.passionate.map((passionate) => (
+              <li>{passionate}</li>
+            ))}
+          </ul>
           <h3>So, what are you waiting for? Let{"'"}s connect!</h3>
         </section>
       ))}
