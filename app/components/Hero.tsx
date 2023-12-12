@@ -1,4 +1,5 @@
 "use client";
+import { Inter } from "next/font/google";
 import AboutmeButton from "../UI/aboutme";
 import ContactmeButton from "../UI/contact";
 import { personaldata } from "../constant/personal";
@@ -35,7 +36,7 @@ export default function Hero() {
             <ul className="list-disc pl-3 ml-3 grid gap-3">
               {personal.experties.map((experties, index) => (
                 <motion.li
-                  className="font-medium text-zinc-300"
+                  className="text-zinc-300 font-sans font-normal"
                   key={index}
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}

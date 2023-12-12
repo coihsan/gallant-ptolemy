@@ -17,7 +17,7 @@ export const personaldata: {
     nickName: "Bobby",
     age: 35,
     hobby: ["Travelling", "Reading", "Coding", "Design", "Writing"],
-    passionate: ["Web Development", "UI/UX", "SEM", "SEO"],
+    passionate: ["Web Development", "UI/UX", "SEM", "SEO", "Photography"],
     skills: [
       "HTML",
       "CSS",

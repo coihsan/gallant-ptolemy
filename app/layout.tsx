@@ -1,8 +1,8 @@
 import "./globals.css";
-import { Noto_Serif } from "next/font/google";
+import { Inter } from "next/font/google";
 import Navigation from "./components/Nav";
 import Footer from "./components/Footer";
-const NotoSerif = Noto_Serif({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Bobby Brown",
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={NotoSerif.className}>
+      <body className={inter.className}>
         <Navigation />
         <main className="max-w-screen-lg mx-auto">{children}</main>
         <Footer />

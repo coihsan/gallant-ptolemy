@@ -52,12 +52,16 @@ export default function Aboutme() {
               </p>
             </div>
           </div>
-          <ul className="flex items-center gap-3 w-full">
-            {personal.passionate.map((passionate) => (
-              <li>{passionate}</li>
-            ))}
-          </ul>
-          <h3>So, what are you waiting for? Let{"'"}s connect!</h3>
+          <div className="pt-[2rem]">
+            <h1 className="text-2xl">Passionate</h1>
+            <ul className="flex items-center gap-3 w-full">
+              {personal.passionate.map((passionate) => (
+                <li className="px-5 py-2 rounded-md bg-zinc-900">
+                  {passionate}
+                </li>
+              ))}
+            </ul>
+          </div>
         </section>
       ))}
     </>

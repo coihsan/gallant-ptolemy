@@ -5,7 +5,7 @@ export default function ContactmeButton() {
   return (
     <>
       <Link
-        className="group text-black border font-semibold border-white rounded-full w-max min-w-[171px] min-h-[50px] bg-white transition-colors duration-500 ease-linear flex justify-center items-center gap-5"
+        className="font-sans group text-black border font-semibold border-white rounded-full w-max min-w-[171px] min-h-[50px] bg-white transition-colors duration-500 ease-linear flex justify-center items-center gap-5"
         href={"/"}
       >
         Contact
