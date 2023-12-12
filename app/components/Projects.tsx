@@ -42,7 +42,7 @@ export default function SideProjects() {
                 </h1>
                 <h3 className="pt-2">{list.projectType}</h3>
                 <p className="text-zinc-500">{list.companyName}</p>
-                <span className="absolute opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300 delay-100 top-3 right-3 fill-[#F3F3F3]">
+                <span className="absolute top-3 right-3 fill-[#F3F3F3]">
                   {icons.linkArrow}
                 </span>
               </div>
