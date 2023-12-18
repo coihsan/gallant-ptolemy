@@ -58,8 +58,10 @@ export default function HeaderMobile(){
             height={200}
             alt="people"
           />
-          <h1 className="font-extrabold text-3xl pt-3">Bob.</h1>
-          <h3 className="text-zinc-400">Web Designer</h3>
+          <div className="flex items-center flex-col">
+            <h1 className="font-extrabold text-3xl pt-3">Bob.</h1>
+            <h3 className="text-zinc-400">Web Designer</h3>
+          </div>
         </motion.div>
         {isMobile && isOpen ? (
           <MobileNavigation closeMenu={closeMenu} />
