@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { NAVIGATION } from "../constant/data";
-import { socialLink } from "../constant/Icons";
-
+import { socialLink, iconNav } from "../constant/Icons";
+import { motion } from "framer-motion";
 export function Hamburger() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,34 +23,33 @@ export function Hamburger() {
 export default function Navigation() {
   const [isMobile, setIsMobile] = useState(false);
   return (
-    <nav className="absolute w-full mx-auto py-3 ">
-      <div className="flex items-center justify-between px-5 mx-auto max-w-screen-lg py-4 border-b-[1px] border-zinc-300">
+    <nav className="fixed left-0 py-3 bg-zinc-900 h-full min-w-[350px]">
+      <div className="flex items-center flex-col px-5 mx-auto ">
+      <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
+        >
+          <Image
+            className="grayscale hover:grayscale-0 transition-all ease-linear duration-500 rounded-lg"
+            src={"/people.webp"}
+            width={200}
+            height={200}
+            alt="people"
+          />
+          <h1>Web Designer</h1>
+        </motion.div>
         <h1 className="font-extrabold text-3xl">Bob.</h1>
-        <div className="flex items-center gap-4 mx-auto ">
-          <div className="flex items-center gap-7">
+        <div className="grid gap-8 w-full p-5">
+          <div className="grid gap-1 w-full">
             {NAVIGATION.map((link) => (
-              <div
-                className="relative NavHover group w-max font-medium group-hover:text-lime-500"
-                key={link.key}
-              >
-                <Link className="group-hover:text-white" href={link.href}>
-                  {link.title}
-                </Link>
-              </div>
+              <Link key={link.key} className="group-hover:text-white NavHover flex items-center gap-3" href={link.href}>
+                <div className="fill-white">{link.icon}</div>
+                <span>{link.title}</span>
+            </Link>
             ))}
-            <div className="relative NavHover w-max font-medium rounded-full flex items-center gap-2">
-              <a href="#">Resume</a>
-              <Image
-                className=""
-                src={"/arrow-up-right-from-square.svg"}
-                width={16}
-                height={16}
-                alt="arrow link"
-              />
-            </div>
             <Hamburger />
           </div>
-        </div>
         <div className="flex items-center gap-3">
           {socialLink.map((iconLink) => (
             <div className="" key={iconLink.id}>
@@ -59,6 +58,7 @@ export default function Navigation() {
               </Link>
             </div>
           ))}
+        </div>
         </div>
       </div>
     </nav>

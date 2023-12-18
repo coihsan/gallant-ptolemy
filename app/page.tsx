@@ -9,13 +9,14 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="flex">
       {/* <LoadingAnimation /> */}
-
+      <div>
       <Hero />
       <Projects />
       <Instagram />
       <Blogs />
+      </div>
     </main>
   );
 }

@@ -21,18 +21,7 @@ body {
   background-color: #070707;
   color: whitesmoke;
 }
-.NavHover::before {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  width: 0;
-  height: 1px;
-  background-color: whitesmoke;
-  transition: 0.35s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-.NavHover:hover::before {
-  width: 100%;
-}
+
 @layer utilities {
   /* .NavHover {
     @apply before:absolute before:content-[""] before:top-2 before:block before:w-full before:h-[1px] before:bg-white hover:before:w-full;
@@ -57,5 +46,8 @@ body {
   }
   .textNeutral200 {
     @apply text-[#CECECE];
+  }
+  .NavHover{
+    @apply hover:bg-zinc-800 p-2 rounded-lg transition-colors ease-linear duration-300
   }
 }

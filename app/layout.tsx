@@ -17,9 +17,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navigation />
-        <main className="max-w-screen-lg mx-auto">{children}</main>
-        <Footer />
+      <section className="flex">
+        <div className="min-w-[350px]">
+          <Navigation />
+        </div>
+      <div className="flex-1 p-16">
+      <main >{children}</main>
+      <Footer />
+      </div>
+      </section>
       </body>
     </html>
   );
