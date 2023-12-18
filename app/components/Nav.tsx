@@ -23,9 +23,10 @@ export function Hamburger() {
 export default function Navigation() {
   const [isMobile, setIsMobile] = useState(false);
   return (
-    <nav className="fixed left-0 py-3 bg-zinc-900 h-full min-w-[350px]">
+    <nav className="fixed left-0 py-3 bg-zinc-900 h-full min-w-[350px] pt-[5rem]">
       <div className="flex items-center flex-col px-5 mx-auto ">
       <motion.div
+      className="flex items-center flex-col"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
@@ -37,9 +38,9 @@ export default function Navigation() {
             height={200}
             alt="people"
           />
-          <h1>Web Designer</h1>
+          <h1 className="font-extrabold text-3xl pt-3">Bob.</h1>
+          <h3 className="text-zinc-400">Web Designer</h3>
         </motion.div>
-        <h1 className="font-extrabold text-3xl">Bob.</h1>
         <div className="grid gap-8 w-full p-5">
           <div className="grid gap-1 w-full">
             {NAVIGATION.map((link) => (

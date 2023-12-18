@@ -5,7 +5,7 @@ import { icons } from "../../constant/Icons";
 import Link from "next/link";
 export default function Projects() {
   return (
-    <section className="w-full px-5 py-[5rem]">
+    <section className="w-full px-5 ">
       <div className="max-w-screen-lg mx-auto">
         <div className="flex justify-between items-center">
           <motion.h1

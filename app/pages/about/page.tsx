@@ -6,7 +6,7 @@ export default function Aboutme() {
   return (
     <>
       {personaldata.map((personal) => (
-        <section className="pt-[9rem]">
+        <section className="">
           <div className="grid grid-cols-2 items-start">
             <motion.div
               className="pr-5 w-full"
