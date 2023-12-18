@@ -2,53 +2,18 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { NAVIGATION } from "../../constant/data";
 import { socialLink, iconNav } from "../../constant/Icons";
-import { motion } from "framer-motion";
 import MobileNavigation from "../../components/nav/MobileNavigation"
 
-export function Hamburger({ onToggle }) {
-  return (
-    <div className="lg:hidden md:flex">
-      <button
-        className="cursor-pointer flex items-center gap-2"
-        onClick={onToggle}
-      >
-        <span>Menu</span>
-        {/* Use your menu icon */}
-        <Image src={"/menu.svg"} width={30} height={30} alt="menu" />
-      </button>
-    </div>
-  );
-}
+
 export default function Navigation() {
-  const [isMobile, setIsMobile] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 600); // Adjust the breakpoint as needed
-    };
-
-    handleResize(); // Initial check
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
+  
 
 
   return (
-    <nav className="fixed left-0 py-3 h-full min-w-[350px] pt-[5rem] max-[600px]:w-full max-[600px]:py-1 z-10">
+    <nav className="fixed left-0 bg-zinc-900 py-3 h-full min-w-[350px] pt-[5rem] max-[600px]:w-full max-[600px]:py-1 z-10">
       <div className="flex items-center flex-col px-5 mx-auto max-[600px]:flex-row max-[600px]:justify-between">
       <motion.div
       className="flex items-center flex-col max-[600px]:flex-row "
@@ -85,10 +50,7 @@ export default function Navigation() {
           ))}
         </div>
         </div>
-          {isMobile && isOpen ? (
-          <MobileNavigation closeMenu={closeMenu} />
-        ) : null}
-          <Hamburger onToggle={handleToggle} />
+         
       </div>
     </nav>
   );
