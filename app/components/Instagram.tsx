@@ -22,7 +22,7 @@ export default function Instagram() {
           {gallery.map((postImage) => (
             <motion.div
               key={postImage.key}
-              className="relative overflow-hidden group"
+              className="relative rounded-md overflow-hidden group"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 2, delay: 1 }}

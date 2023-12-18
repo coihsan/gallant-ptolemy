@@ -10,18 +10,19 @@ export default function Hero() {
   return (
     <section className="w-full px-5 max-[600px]:py-[9rem] ">
       <div className="max-w-screen-lg mx-auto flex items-center justify-between gap-11 max-[600px]:flex-col max-[600px]:items-start">
-        
         {personaldata.map((personal) => (
           <div key={personal.key}>
             <motion.h1
-              className="text-[4rem] leading-none font-semibold "
+              className="text-[4rem] leading-none font-bold "
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 3 }}
             >
               I{"'"}m {personal.fullName}.
             </motion.h1>
-            <h3 className="text-zinc-500 font-semibold text-3xl pb-6">Real Things. Experienced Designer.</h3>
+            <h3 className="text-zinc-500 font-semibold text-3xl pb-6">
+              Real Things. Experienced Designer.
+            </h3>
             <ul className="list-disc pl-6 py-6 ml-3 grid gap-3">
               {personal.experties.map((experties, index) => (
                 <motion.li
