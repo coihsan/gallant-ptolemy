@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Navigation from "./components/Nav";
+import Navigation from "./components/nav/Nav";
 import Footer from "./components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,10 +18,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
       <section className="flex">
-        <div className="min-w-[350px]">
+        <div className="min-w-[350px] max-[600px]:w-full">
           <Navigation />
         </div>
-      <div className="flex-1 p-16">
+      <div className="flex-1 p-16 max-[600px]:p-5 max-[600px]:flex-0">
       <main >{children}</main>
       <Footer />
       </div>

@@ -2,19 +2,20 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { NAVIGATION } from "../constant/data";
-import { socialLink, iconNav } from "../constant/Icons";
+import { NAVIGATION } from "../../constant/data";
+import { socialLink, iconNav } from "../../constant/Icons";
 import { motion } from "framer-motion";
-export function Hamburger() {
-  const [isOpen, setIsOpen] = useState(false);
+import MobileNavigation from "../../components/nav/MobileNavigation"
 
+export function Hamburger({ onToggle }) {
   return (
     <div className="lg:hidden md:flex">
       <button
         className="cursor-pointer flex items-center gap-2"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={onToggle}
       >
         <span>Menu</span>
+        {/* Use your menu icon */}
         <Image src={"/menu.svg"} width={30} height={30} alt="menu" />
       </button>
     </div>
@@ -22,17 +23,41 @@ export function Hamburger() {
 }
 export default function Navigation() {
   const [isMobile, setIsMobile] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 600); // Adjust the breakpoint as needed
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+
   return (
-    <nav className="fixed left-0 py-3 bg-zinc-900 h-full min-w-[350px] pt-[5rem]">
-      <div className="flex items-center flex-col px-5 mx-auto ">
+    <nav className="fixed left-0 py-3 h-full min-w-[350px] pt-[5rem] max-[600px]:w-full max-[600px]:py-1 z-10">
+      <div className="flex items-center flex-col px-5 mx-auto max-[600px]:flex-row max-[600px]:justify-between">
       <motion.div
-      className="flex items-center flex-col"
+      className="flex items-center flex-col max-[600px]:flex-row "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
           <Image
-            className="grayscale hover:grayscale-0 transition-all ease-linear duration-500 rounded-lg"
+            className="grayscale hover:grayscale-0 transition-all ease-linear duration-500 rounded-lg max-[600px]:w-[50px] max-[600px]:h-[50px]"
             src={"/people.webp"}
             width={200}
             height={200}
@@ -41,7 +66,7 @@ export default function Navigation() {
           <h1 className="font-extrabold text-3xl pt-3">Bob.</h1>
           <h3 className="text-zinc-400">Web Designer</h3>
         </motion.div>
-        <div className="grid gap-8 w-full p-5">
+        <div className="grid gap-8 w-full p-5 max-[600px]:hidden">
           <div className="grid gap-1 w-full">
             {NAVIGATION.map((link) => (
               <Link key={link.key} className="group-hover:text-white NavHover flex items-center gap-3" href={link.href}>
@@ -49,7 +74,6 @@ export default function Navigation() {
                 <span>{link.title}</span>
             </Link>
             ))}
-            <Hamburger />
           </div>
         <div className="flex items-center gap-3">
           {socialLink.map((iconLink) => (
@@ -61,6 +85,10 @@ export default function Navigation() {
           ))}
         </div>
         </div>
+          {isMobile && isOpen ? (
+          <MobileNavigation closeMenu={closeMenu} />
+        ) : null}
+          <Hamburger onToggle={handleToggle} />
       </div>
     </nav>
   );
