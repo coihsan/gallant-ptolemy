@@ -5,7 +5,7 @@ import { personaldata } from "../../constant/personal";
 export default function Aboutme() {
   const personal = personaldata[0];
   return (
-    <section className="pt-16" key={personal.key}>
+    <section className="max-[600px]:pt-[9rem]" key={personal.key}>
       <div className="grid grid-cols-2 max-[600px]:grid-cols-1 items-start">
         <motion.div
           className="pr-5 w-full"
