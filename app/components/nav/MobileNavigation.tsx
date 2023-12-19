@@ -6,7 +6,7 @@ import { NAVIGATION } from "../../constant/data";
 // }
 
 const MobileNavigation = ({ closeMenu }) => (
-  <div className="absolute top-20 left-0 grid gap-8 p-5 w-full bg-zinc-900 -z-10 rounded-b-lg">
+  <div className="absolute top-20 left-0 grid gap-8 p-5 w-full bg-zinc-900/10 backdrop-blur-xl -z-10 rounded-b-lg">
     <div className="grid gap-1 w-full">
       {NAVIGATION.map((link) => (
         <Link

@@ -29,7 +29,7 @@ export default function Instagram() {
               viewport={{ once: true }}
             >
               <Image
-                className="grayscale hover:grayscale-0 transition-all ease-linear duration-300 hover:scale-[1.1]"
+                className="transition-all ease-linear duration-300 hover:scale-[1.1]"
                 src={postImage.src}
                 width={400}
                 height={300}
