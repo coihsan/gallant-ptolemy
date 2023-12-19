@@ -1,80 +1,57 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import ReactMarkdown from "react-markdown";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import Thumbnail from "../components/Thumbnail";
+import type { NextPage, GetStaticProps } from "next";
+import { IPost } from "../types/post";
+import Link from "next/link";
+import { getAllPosts } from "../utils/mdxUtils";
 
-interface Post {
-  title: string;
-  date: string;
-  slug: string;
-  content: string;
-}
+// props type
+type Props = {
+  posts: [IPost];
+};
 
-interface Props {
-  posts: Post[];
-}
-const BlogArchive = ({ posts }: Props) => {
+// component render function
+const Home: NextPage<Props> = ({ posts }: Props) => {
   return (
     <div>
-      {posts.map((post) => (
-        <div key={post.slug}>
-          <h2>{post.title}</h2>
-          <p>{post.date}</p>
-          <ReactMarkdown
-            components={{
-              code({ node, inline, className, children, ...props }) {
-                const match = /language-(\w+)/.exec(className || "");
-                return !inline && match ? (
-                  <SyntaxHighlighter
-                    style={atomOneDark}
-                    language={match[1]}
-                    PreTag="div"
-                    children={String(children).replace(/\n$/, "")}
-                    {...props}
-                  />
-                ) : (
-                  <code className={className} {...props}>
-                    {children}
-                  </code>
-                );
-              },
-            }}
-          >
-            {post.content}
-          </ReactMarkdown>
-        </div>
-      ))}
+      <h1 className="text-4xl font-bold mb-4">Technical articles</h1>
+
+      <div className="space-y-12">
+        {posts.map((post) => (
+          <div key={post.slug}>
+            <div className="mb-4">
+              <Thumbnail
+                slug={post.slug}
+                title={post.title}
+                src={post.thumbnail}
+              />
+            </div>
+
+            <h2 className="text-2xl font-bold mb-4">
+              <Link href={`/posts/${post.slug}`}>
+                <a>{post.title}</a>
+              </Link>
+            </h2>
+
+            <p>{post.description}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
-export async function getStaticProps() {
-  const files = fs.readdirSync(path.join("posts"));
-  const posts = files.map((filename) => {
-    const markdownWithMetadata = fs.readFileSync(
-      path.join("posts", filename),
-      "utf-8",
-    );
-    const { data, content } = matter(markdownWithMetadata);
-    const frontmatter = {
-      ...data,
-      date: data.date.toISOString(),
-    };
-    return {
-      slug: filename.replace(".md", ""),
-      content,
-      ...frontmatter,
-    };
-  });
-  return {
-    props: {
-      posts: posts.sort(
-        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
-      ),
-    },
-  };
-}
+export default Home;
 
-export default Blog;
+// get posts from serverside at build time
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = getAllPosts([
+    "title",
+    "slug",
+    "date",
+    "description",
+    "thumbnail",
+  ]);
+
+  // retunr the posts props
+  return { props: { posts } };
+};
