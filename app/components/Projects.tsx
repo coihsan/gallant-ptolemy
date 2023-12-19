@@ -7,17 +7,15 @@ export default function SideProjects() {
   return (
     <section className="w-full py-[5rem]">
       <div className="max-w-screen-lg mx-auto">
-        <div className="flex justify-between items-center">
-          <motion.h1
-            className="text-3xl font-semibold"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 2, delay: 1 }}
-            viewport={{ once: true }}
-          >
-            Projects
-          </motion.h1>
-        </div>
+        <motion.h1
+          className="text-3xl font-semibold"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 2, delay: 1 }}
+          viewport={{ once: true }}
+        >
+          Projects
+        </motion.h1>
         <div className="grid gap-3 grid-cols-2 pt-[2rem]">
           {projectslist.map((list) => (
             <motion.a

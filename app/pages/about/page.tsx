@@ -22,7 +22,7 @@ export default function Aboutme() {
           />
         </motion.div>
         <div>
-          <h1 className="text-3xl">Hey there!</h1>
+          <h1 className="text-3xl">Hey there! 👋🏻</h1>
           <br />
           <p className="">
             I{"'"}m a digital marketing whiz who lives and breathes sales
