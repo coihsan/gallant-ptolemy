@@ -5,8 +5,8 @@ import { personaldata } from "../../constant/personal";
 export default function Aboutme() {
   const personal = personaldata[0];
   return (
-    <section className="" key={personal.key}>
-      <div className="grid grid-cols-2 items-start">
+    <section className="pt-16" key={personal.key}>
+      <div className="grid grid-cols-2 max-[600px]:grid-cols-1 items-start">
         <motion.div
           className="pr-5 w-full"
           initial={{ opacity: 0 }}
@@ -53,9 +53,12 @@ export default function Aboutme() {
       </div>
       <div className="pt-[2rem]">
         <h1 className="text-2xl">Passionate</h1>
-        <ul className="flex items-center gap-3 w-full">
+        <ul className="flex items-center flex-wrap gap-3 w-full">
           {personal.passionate.map((passionate, index) => (
-            <li key={index} className="px-5 py-2 rounded-md bg-zinc-900">
+            <li
+              key={index}
+              className="px-5 py-2 border border-white rounded-full"
+            >
               {passionate}
             </li>
           ))}
