@@ -59,7 +59,9 @@ export default function HeaderMobile() {
           alt="people"
         />
         <div className="flex items-start flex-col pl-6">
-          <h1 className="font-extrabold text-3xl pt-3 max-[600px]:text-2xl">Bob.</h1>
+          <h1 className="font-extrabold text-3xl pt-3 max-[600px]:text-2xl">
+            Bob.
+          </h1>
           <h3 className="text-zinc-400">Web Designer</h3>
         </div>
       </motion.div>

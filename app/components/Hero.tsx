@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="w-full px-5 max-[600px]:py-[9rem] ">
+    <section className="w-full max-[600px]:py-[9rem] ">
       <div className="max-w-screen-lg mx-auto flex items-center justify-between gap-11 max-[600px]:flex-col max-[600px]:items-start">
         {personaldata.map((personal) => (
           <div key={personal.key}>
