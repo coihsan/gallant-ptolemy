@@ -1,3 +1,9 @@
+---
+title: Lorem ipsum dolor sit amet
+date: 2023-12-19
+---
+
+
 # Lorem ipsum dolor sit amet
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non enim venenatis, euismod diam et, efficitur risus. Donec mattis in eros et accumsan. Donec efficitur tristique tortor nec blandit. Morbi quis tincidunt magna. Suspendisse pretium venenatis ipsum. Nullam malesuada tempus tincidunt. Fusce lectus ex, scelerisque nec sapien sit amet, faucibus malesuada eros. Proin et risus vitae nunc mollis tristique. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam nec dictum leo. Proin aliquam ex sapien. Nullam quis velit vel augue porttitor gravida quis vitae nunc. Cras malesuada, lectus nec commodo elementum, turpis mi tincidunt arcu, at pretium metus leo sit amet arcu.
