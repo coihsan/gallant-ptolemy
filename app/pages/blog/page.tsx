@@ -15,8 +15,7 @@ interface Post {
 interface Props {
   posts: Post[];
 }
-
-const Blog = ({ posts }: Props) => {
+const BlogArchive = ({ posts }: Props) => {
   return (
     <div>
       {posts.map((post) => (
