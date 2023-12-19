@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { gallery } from "../constant/data";
 import { iconSocial } from "../constant/Icons";
-import { motion, whileInView } from "framer-motion";
+import { motion } from "framer-motion";
 export default function Instagram() {
   return (
     <section className="w-full px-5">

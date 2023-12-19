@@ -1,6 +1,6 @@
 "use client";
 import { projectslist } from "../constant/data";
-import { motion, whileInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { icons } from "../constant/Icons";
 import Link from "next/link";
 export default function SideProjects() {
