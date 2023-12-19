@@ -25,7 +25,7 @@ export default function SideProjects() {
               key={list.key}
               href={list.url}
               target={"_blank"}
-              className="relative group rounded-md bg-white text-zinc-900 hover:bg-zinc-300 transition-colors duration-500 ease-linear px-5 py-9"
+              className="relative group rounded-md border border-white  hover:bg-zinc-900 transition-colors duration-500 ease-linear px-5 py-9"
             >
               <div>
                 <h1 className="font-semibold text-[1.2rem]">

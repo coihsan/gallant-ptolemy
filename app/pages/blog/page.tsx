@@ -2,7 +2,7 @@ import Link from "next/link";
 import { getAllPosts } from "../../utils/mdParser";
 
 interface BlogProps {
-  posts: void;
+  posts: Post[];
 }
 
 export default function BlogArchive({ posts }: BlogProps) {

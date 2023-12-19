@@ -5,7 +5,7 @@ export default function AboutmeButton() {
   return (
     <>
       <Link
-        className="font-sans group border border-zinc-700 hover:border-zinc-400 w-max min-w-[171px] min-h-[50px] flex items-center transition-all duration-300 ease-linear justify-center rounded-full  bg-zinc-900 gap-5"
+        className="font-sans group border border-zinc-700 hover:border-white w-max min-w-[171px] min-h-[50px] flex items-center transition-all duration-300 ease-linear justify-center rounded-full  bg-zinc-900 gap-5"
         href={"/"}
       >
         About Me
