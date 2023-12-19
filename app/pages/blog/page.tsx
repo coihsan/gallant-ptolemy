@@ -1,8 +1,8 @@
-import Thumbnail from "../components/Thumbnail";
+import Thumbnail from "../../pages/blog/Thumbnail";
 import type { NextPage, GetStaticProps } from "next";
-import { IPost } from "../types/post";
+import { IPost } from "../../pages/blog/types/posts";
 import Link from "next/link";
-import { getAllPosts } from "../utils/mdxUtils";
+import { getAllPosts } from "../../utils/mdxUtils";
 
 // props type
 type Props = {
@@ -27,9 +27,7 @@ const Home: NextPage<Props> = ({ posts }: Props) => {
             </div>
 
             <h2 className="text-2xl font-bold mb-4">
-              <Link href={`/posts/${post.slug}`}>
-                <a>{post.title}</a>
-              </Link>
+              <Link href={`/posts/${post.slug}`}>{post.title}</Link>
             </h2>
 
             <p>{post.description}</p>
