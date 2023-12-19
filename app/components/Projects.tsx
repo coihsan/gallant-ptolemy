@@ -2,7 +2,6 @@
 import { projectslist } from "../constant/data";
 import { motion } from "framer-motion";
 import { icons } from "../constant/Icons";
-import Link from "next/link";
 export default function SideProjects() {
   return (
     <section className="w-full py-[5rem]">
