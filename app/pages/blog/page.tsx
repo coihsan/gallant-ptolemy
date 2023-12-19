@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { getAllPosts } from "../../utils/mdParser";
 
-export default function BlogArchive({ posts }: { posts: () => void }) {
+interface BlogProps {
+  posts: void;
+}
+
+export default function BlogArchive({ posts }: BlogProps) {
   return (
     <div>
       <h1>Blog Archive</h1>
