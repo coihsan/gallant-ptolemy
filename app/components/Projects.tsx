@@ -16,7 +16,7 @@ export default function SideProjects() {
         >
           Projects
         </motion.h1>
-        <div className="grid gap-3 grid-cols-2 pt-[2rem]">
+        <div className="grid gap-3 lg:grid-cols-3 grid-cols-2 pt-[2rem]">
           {projectslist.map((list) => (
             <motion.a
               initial={{ opacity: 0, y: 20 }}
@@ -26,7 +26,7 @@ export default function SideProjects() {
               key={list.key}
               href={list.url}
               target={"_blank"}
-              className="relative group rounded-md bg-zinc-900 hover:bg-zinc-800 transition-colors duration-500 ease-linear px-5 py-9"
+              className="relative group rounded-md bg-white text-zinc-900 hover:bg-zinc-300 transition-colors duration-500 ease-linear px-5 py-9"
             >
               <div>
                 <h1 className="font-semibold text-[1.2rem]">

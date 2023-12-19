@@ -1,11 +1,13 @@
 "use client";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import MobileNavigation from "../../components/nav/MobileNavigation";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export function Hamburger({ onToggle }) {
+
+
+export function Hamburger({ onToggle }: { onToggle: () => void }) {
   return (
     <div className="lg:hidden md:flex">
       <button
