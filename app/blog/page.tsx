@@ -14,7 +14,7 @@ const BlogPage = () => {
     const slug = path.params.slug;
 
     // Read the metadata from the Markdown file.
-    const data = grayMatter(`blog/${slug}.md`);
+    const data = grayMatter(`blog/posts/${slug}.md`);
 
     // Return the post data.
     return {
