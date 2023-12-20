@@ -1,9 +1,14 @@
-import {iconNav} from "../constant/Icons"
+import { iconNav } from "../constant/Icons";
 export const NAVIGATION = [
-  { href: "/", key: 0, title: "Home", icon: iconNav.homepage},
+  { href: "/", key: 0, title: "Home", icon: iconNav.homepage },
   { href: "/pages/about", key: 1, title: "About Me", icon: iconNav.userTie },
-  { href: "/pages/projects", key: 2, title: "Projects", icon: iconNav.briefcase },
-  { href: "/pages/blog", key: 2, title: "Blog", icon: iconNav.pen },
+  {
+    href: "/pages/projects",
+    key: 2,
+    title: "Projects",
+    icon: iconNav.briefcase,
+  },
+  { href: "/blog", key: 2, title: "Blog", icon: iconNav.pen },
   { href: "/pages/gallery", key: 3, title: "Photos", icon: iconNav.gallery },
 ];
 
