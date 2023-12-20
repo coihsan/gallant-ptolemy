@@ -12,8 +12,8 @@ export default function Blog({ posts }: BlogProps) {
       <ul>
         {posts.map((post) => (
           <li key={post.filename}>
-            <Link href={`/app/blog/${posts.filename.replace(".md", "")}`}>
-              <a>{post.data.title}</a>
+            <Link href={`/blog/posts/${post.filename.replace(".md", "")}`}>
+              {post.data.title}
             </Link>
           </li>
         ))}
