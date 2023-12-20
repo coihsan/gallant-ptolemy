@@ -1,33 +1,46 @@
-import Link from "next/link";
-import { getAllPosts } from "../blog/utils/mdParser";
+import { useState } from "react";
+import { getStaticPaths, getStaticProps } from "next";
+import { Markdown } from "react-markdown";
+import { grayMatter } from "gray-matter";
 
-interface BlogProps {
-  posts: Post[];
-}
+const BlogPage = () => {
+  const [posts, setPosts] = useState([]);
 
-export default function Blog({ posts }: BlogProps) {
+  // Get the paths to all the blog posts.
+  const paths = await getStaticPaths();
+
+  // Get the data for each blog post.
+  const postsData = paths.map((path) => {
+    const slug = path.params.slug;
+
+    // Read the metadata from the Markdown file.
+    const data = grayMatter(`blog/${slug}.md`);
+
+    // Return the post data.
+    return {
+      slug,
+      title: data.title,
+      description: data.description,
+      content: data.content,
+    };
+  });
+
+  // Set the posts data.
+  setPosts(postsData);
+
   return (
     <div>
-      <h1>Blog Archive</h1>
-      <ul>
-        {posts.map((post) => (
-          <li key={post.filename}>
-            <Link href={`/blog/posts/${post.filename.replace(".md", "")}`}>
-              {post.data.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <h1>Blog Posts</h1>
+
+      {posts.map((post) => (
+        <div key={post.slug}>
+          <h2>{post.title}</h2>
+          <p>{post.description}</p>
+          <Markdown source={post.content} />
+        </div>
+      ))}
     </div>
   );
-}
+};
 
-export async function getStaticProps() {
-  const posts = getAllPosts();
-
-  return {
-    props: {
-      posts,
-    },
-  };
-}
+export default BlogPage;

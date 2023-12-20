@@ -1,17 +1,21 @@
 ---
-title: Lorem ipsum dolor sit amet
-date: 2023-12-19
+title: My First Blog Post
+date: 2023-07-20
+description: This is my first blog post.
 ---
 
+# My First Blog Post
 
-# Lorem ipsum dolor sit amet
+This is my first blog post. I'm excited to start writing about my thoughts and experiences.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non enim venenatis, euismod diam et, efficitur risus. Donec mattis in eros et accumsan. Donec efficitur tristique tortor nec blandit. Morbi quis tincidunt magna. Suspendisse pretium venenatis ipsum. Nullam malesuada tempus tincidunt. Fusce lectus ex, scelerisque nec sapien sit amet, faucibus malesuada eros. Proin et risus vitae nunc mollis tristique. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam nec dictum leo. Proin aliquam ex sapien. Nullam quis velit vel augue porttitor gravida quis vitae nunc. Cras malesuada, lectus nec commodo elementum, turpis mi tincidunt arcu, at pretium metus leo sit amet arcu.
+In this post, I'll talk about how I created this blog.
 
-Pellentesque porta nulla nibh, ac fringilla felis condimentum nec. In non ornare nisi. Vestibulum tellus est, efficitur ac consectetur vitae, posuere nec turpis. Etiam placerat odio et diam porta suscipit. Curabitur quam sapien, convallis vitae lacus et, facilisis hendrerit urna. Nulla ornare est eget hendrerit posuere. Sed non mattis metus, in posuere felis. Nulla eleifend non erat vel sagittis. Nullam enim magna, maximus vel posuere eget, pretium vel ante. Etiam volutpat elit et turpis imperdiet eleifend. Curabitur faucibus augue neque. Duis at placerat lorem, sit amet ullamcorper mi. Duis suscipit consectetur nulla, eget venenatis orci fermentum id. Integer nec dui quis ante elementum dapibus mollis nec sem. Ut velit enim, vehicula vel leo sed, pretium aliquet mauris. Sed eu tincidunt dolor.
+I used Next.js with TypeScript and Markdown files. It was pretty easy to set up. I just followed the instructions in the [Next.js documentation](https://nextjs.org/docs/getting-started).
 
-Curabitur blandit hendrerit porttitor. Curabitur maximus eros nec malesuada vulputate. Nullam aliquet dui neque, id pellentesque tellus facilisis id. Proin turpis lorem, pretium sed efficitur nec, pulvinar id nulla. Morbi vehicula leo enim, ut consectetur augue maximus faucibus. Sed sodales sem vitae viverra auctor. Fusce bibendum arcu maximus arcu venenatis scelerisque et non mauris. Praesent sed dignissim ante. Cras fringilla pharetra scelerisque.
+I'm also using gray-matter to read the metadata from the Markdown files. This allows me to get the title, date, and description of each post.
 
-Nullam egestas et velit lobortis gravida. Etiam porta diam id porta interdum. Nullam sed laoreet diam, quis interdum libero. Etiam blandit maximus erat at pellentesque. Suspendisse in finibus nisl, non fringilla libero. Suspendisse euismod nulla eu massa pretium iaculis. Proin purus nunc, egestas vel vehicula at, semper in augue. Nam congue et lacus vestibulum aliquam. Donec non dui eu diam imperdiet tristique sed non enim.
+I'm using react-markdown to render the Markdown content into HTML. This makes it easy to display the blog posts on my website.
 
-Suspendisse hendrerit at urna sed egestas. Fusce lacinia interdum vulputate. Nullam fringilla rutrum vestibulum. Proin sit amet vestibulum elit. Donec suscipit blandit tincidunt. Vestibulum ac fringilla sem. Sed ex mi, feugiat sit amet dui non, congue sagittis quam. Nulla dictum ultricies lacus, sed euismod felis venenatis quis. Vivamus sodales sem blandit ultricies dapibus. Aenean eu tellus elit. Praesent quis odio quis augue pulvinar feugiat. Aenean nec pellentesque nulla. Curabitur ornare sollicitudin lacus, vitae euismod massa efficitur vel.
+I'm also using react-syntax-highlighter to highlight the code blocks in the Markdown content. This makes it easier for readers to understand the code.
+
+I'm still learning about Next.js and Markdown, but I'm excited to keep writing and learning.

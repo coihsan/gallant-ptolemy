@@ -44,7 +44,7 @@ export default function HeaderMobile() {
     setIsOpen(false);
   };
   return (
-    <header className=" lg:hidden md:flex items-center gap-3 fixed px-5 py-3 justify-between w-full backdrop-blur-lg bg-zinc-900/10 z-[50]">
+    <header className=" lg:hidden sm:flex items-center gap-3 fixed px-5 py-3 justify-between w-full backdrop-blur-lg bg-zinc-900/10 z-[50]">
       <motion.div
         className="flex items-center "
         initial={{ opacity: 0 }}
