@@ -6,8 +6,8 @@ interface MobileProps {
 }
 
 const MobileNavigation = ({ closeMenu }: MobileProps) => (
-  <div className="absolute top-20 left-0 grid gap-8 p-5 w-full bg-zinc-900 -z-10 rounded-b-lg">
-    <div className="grid gap-1 w-full">
+  <div className="absolute top-20 left-0 grid gap-8 p-5 w-full  rounded-b-lg">
+    <div className="grid gap-1 w-full backdrop-blur-lg bg-zinc-900/10 z-10">
       {NAVIGATION.map((link) => (
         <Link
           key={link.key}
