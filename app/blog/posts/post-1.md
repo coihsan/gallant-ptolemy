@@ -1,7 +1,9 @@
 ---
+author: Ihsan
 title: My First Blog Post
 date: 2023-07-20
 description: This is my first blog post.
+tag: Blog
 ---
 
 # My First Blog Post

@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { getStaticPaths, getStaticProps } from "next";
 import { Markdown } from "react-markdown";
