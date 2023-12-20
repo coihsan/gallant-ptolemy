@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export function Hamburger({ onToggle }: { onToggle: () => void }) {
   return (
-    <div className="max-[1023px]:hidden lg:hidden sm:flex">
+    <div className="lg:hidden md:flex">
       <button
         className="cursor-pointer flex items-center gap-2"
         onClick={onToggle}
@@ -44,7 +44,7 @@ export default function HeaderMobile() {
     setIsOpen(false);
   };
   return (
-    <header className="lg:hidden max-[600px]:flex items-center gap-3 fixed px-5 py-3 justify-between w-full bg-zinc-800 z-[50]">
+    <header className="lg:hidden max-[600px]:flex items-center gap-3 fixed px-5 py-3 justify-between w-full backdrop-blur-lg bg-zinc-900/10 z-[50]">
       <motion.div
         className="flex items-center "
         initial={{ opacity: 0 }}

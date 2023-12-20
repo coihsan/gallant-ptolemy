@@ -18,16 +18,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <section className="flex">
-        <HeaderMobile />
-        <div className="min-w-[350px] max-[600px]:hidden">
-          <Navigation />
-        </div>
-      <div className="flex-1 p-16 max-[600px]:p-5 max-[600px]:flex-0">
-      <main className="z-[100]">{children}</main>
-      <Footer />
-      </div>
-      </section>
+        <section className="flex">
+          <HeaderMobile />
+          <div className="lg:min-w-[350px] max-[600px]:hidden">
+            <Navigation />
+          </div>
+          <div className="flex-1 p-16 max-[600px]:p-5 max-[600px]:flex-0">
+            <main className="z-[100]">{children}</main>
+            <Footer />
+          </div>
+        </section>
       </body>
     </html>
   );

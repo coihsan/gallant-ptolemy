@@ -39,8 +39,6 @@ const Home: NextPage<Props> = ({ posts }: Props) => {
 };
 
 export default Home;
-
-// get posts from serverside at build time
 export const getStaticProps: GetStaticProps = async () => {
   const posts = getAllPosts([
     "title",
