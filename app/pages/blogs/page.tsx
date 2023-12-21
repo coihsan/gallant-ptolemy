@@ -8,13 +8,13 @@ export async function getStaticProps() {
     },
   };
 }
-export default function BlogsPosts() {
+export default function BlogsPosts({ allPostsData }) {
   return (
     <section>
       <section>
         <h2>Blog</h2>
         <ul>
-          {getSortedPostsData.map(({ id, date, title }) => (
+          {allPostsData.map(({ id, date, title }) => (
             <li key={id}>
               {title}
               <br />
