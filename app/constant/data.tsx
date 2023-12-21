@@ -8,8 +8,8 @@ export const NAVIGATION = [
     title: "Projects",
     icon: iconNav.briefcase,
   },
-  { href: "/pages/blogs", key: 2, title: "Blog", icon: iconNav.pen },
-  { href: "/pages/gallery", key: 3, title: "Photos", icon: iconNav.gallery },
+  { href: "/blogs", key: 3, title: "Blog", icon: iconNav.pen },
+  { href: "/pages/gallery", key: 4, title: "Photos", icon: iconNav.gallery },
 ];
 
 export const gallery = [

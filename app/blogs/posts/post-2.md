@@ -1,7 +1,8 @@
 ---
+slug: 02
 title: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum placerat sapien sit amet hendrerit. Nunc aliquet dolor sapien, nec varius augue suscipit quis. Aenean lobortis risus quis mi pharetra molestie.
 date: 20 Desember 2023
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum placerat sapien sit amet hendrerit. Nunc aliquet dolor sapien, nec varius augue suscipit quis. Aenean lobortis risus quis mi pharetra molestie.
 author: Muhammad Ihsan
 ---
 
