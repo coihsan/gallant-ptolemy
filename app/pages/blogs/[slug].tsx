@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { getAllPosts } from "../blogs/lib/post";
+import { getAllPosts } from "./lib/post";
 
 interface BlogPostProps {
   post: { title: string; date: string };

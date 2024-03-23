@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { GetStaticProps } from "next";
 import Link from "next/link";
-import { getAllPosts } from "../blogs/lib/post";
+import { getAllPosts } from "./lib/post";
 
 interface BlogProps {
   posts: Array<{ slug: string; title: string; date: string }>;

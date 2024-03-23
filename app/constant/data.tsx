@@ -8,7 +8,7 @@ export const NAVIGATION = [
     title: "Projects",
     icon: iconNav.briefcase,
   },
-  { href: "/blogs", key: 3, title: "Blog", icon: iconNav.pen },
+  { href: "/pages/blogs", key: 3, title: "Blog", icon: iconNav.pen },
   { href: "/pages/gallery", key: 4, title: "Photos", icon: iconNav.gallery },
 ];
 
